@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content=" "width=device-width,
+        initial-scale="1.0">
+        <tittle>Solar System Explorer</tittle>
+        <link rel=""stylesheet" href="style.css">
+    </head>
+    <body> 
+        <header>
+            <h1>&#127756;Solar System Explorer</h1>
+            <nav>
+                <a href ="#Home">Home</a>
+                <a href ="#planets">Planets</a>
+                <a href ="#comparison">Comparison</a>
+            </nav>
+            <section id="home" class="hero">
+                <div class="hero-content">
+                    <p class="subtitle">WELCOME TO SPACE</p>
+                    <h2>Explore Our Solar System</h2>
+                    <p>
+                        Discover the planets of our Solar System,
+                        their temperature, populations, distances,
+                        moons and interesting facts. 
+                    </p>
+                    <button onclick="scrollToPlanets()">
+                        Explore Planets
+                    </button>
+                </div>
+            </section>
+            <section id="planets">
+                <h2 class ="section-title">Our Solar System</h2>
+                <p
+                    class="section-description">
+                        Click on any planet to view detailed information.
+                    </p>
+                    <div class="solar-system">
+                        <div class="sun">
+
+                        </div>
+                        <div class="orbit orbit1">
+                           <div 
+                            class="planet mercury"
+                            onclick="showPlanet('Mercury')">
+                           </div>
+                        </div>
+                    </div>
+                    <div class="orbit orbit2">
+                        <div class="planet venus"
+                            onclick="showPlanet('Venus')">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="orbit orbit3">
+                    <div class ="planet earth"
+                        onclick="showPlanet('Earth')">
+                    </div>
+                </div>
+
+                <div class="orbit orbit4">
+                    <div class ="planet mars"
+                    onclick="showPlanet('Mars')">
+                    </div>
+                </div>
+                
+                <div class="orbit orbit5">
+                    <div class ="planet jupiter"
+                    onclick="showPlanet('Jupiter')">
+                    </div>
+                </div>
+
+                <div class="orbit orbit6">
+                    <div class ="planet saturn"
+                    onclick="showPlanet('Saturn')">
+                    </div>
+                </div>
+
+                <div class="orbit orbit7">
+                    <div class ="planet uranus"
+                    onclick="showPlanet('Uranus')">
+                    </div>
+                </div>
+
+                <div class="orbit orbit8">
+                    <div class ="planet neptune"
+                    onclick="showPlanet('Neptune')">
+                    </div>
+                </div>
+            </section>
+
+            <section class="information">
+                <h2 id="planet-name">Earth</h2>
+                <p id="planet-description">
+                    Our home planet and the only known planet with life.
+                </p>
+                <div class="info-grid">
+                <div class="info-card">
+                    <h3>Temperature</h3>
+                    <p id="temperature">15°C</p>
+                </div>
+                </div>
+            </section>
+    </body>
