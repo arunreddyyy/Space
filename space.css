@@ -149,6 +149,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
     background: 
         radial-gradient(
@@ -184,11 +185,21 @@ section {
 
         position: absolute;
 
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
         z-index: 10;
 }
  
 .orbit{
     position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
 
     border: 1px dashed rgba(255, 255, 255, 0.2);
 
@@ -202,7 +213,7 @@ section {
 .orbit1{
     width: 120px;
     height: 120px;
-
+    
 }
 
 .orbit2{
@@ -255,21 +266,23 @@ section {
 }
 
 
-.planet{
+.planet {
     border-radius: 50%;
 
     cursor: pointer;
 
     position: absolute;
 
-    top: -12px;
+    z-index: 5;
 
-    transition: 0.03;
+    transition: 0.03s;
 
     box-shadow:
-        0 0 15px rgba(255,255,255,0.03)
+        0 0 15px rgba(255,255,255,0.03);
 
 }
+
+
 
 .plane:hover{
     transform: scale(1.3);
