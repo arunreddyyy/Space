@@ -284,10 +284,47 @@ section {
 
 
 
-.plane:hover{
+.planet:hover{
     transform: scale(1.3);
 
 }
+.orbit1 .planet{
+    top: 20%;
+    left: 90%;
+}
+
+.orbit2 .planet{
+    top: 85%;
+    left: 70%;
+
+}
+
+.orbit3 .planet{
+    top: 20%;
+    left: 15%;
+}
+.orbit4 .planet{
+    top: 70%;
+    left: 10%; 
+}
+.orbit5 .planet{
+    top: 5%;
+    left: 35%;
+}
+.orbit6 .planet{
+    top: 50%;
+    left: 95%;
+
+}
+.orbit7 .planet{
+    top:90%;
+    left:40%;
+}
+.orbit8 .planet{
+    top: 30%;
+    left: 5%;
+}
+
 
 .mercury{
     width: 20px;
