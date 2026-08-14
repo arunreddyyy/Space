@@ -5,7 +5,7 @@ const planets = {
         "The smallest planet and the closest planet to the sun." ,
 
         temperature:
-            "167&deg;C",
+            "167°C",
 
             population:
                 "0",
@@ -20,7 +20,7 @@ const planets = {
                 "88 Days",
 
             gravity:
-                "3.70 m/s&sup2;",
+                "3.70 m/s²",
             
 
             facts: [
@@ -40,7 +40,7 @@ const planets = {
             "A hot world covered by thick clouds and a powerful greenhouse effect.",
 
         temperature:
-            "464&deg;C",
+            "464°C",
 
         population:
             "0",
@@ -55,7 +55,7 @@ const planets = {
             "225 Days",
 
         gravity:
-            "8.87 m/s&sup2;",
+            "8.87 m/s²",
 
         facts: [
             "Venus is the hottest planet.",
@@ -68,12 +68,12 @@ const planets = {
     },
 
     Earth: {
-        temperature: "15&deg;C",
+        temperature: "15°C",
         population: "8.3 billion",
         distance: "149.6 million km",
         moons: 1,
         orbit:"365.25 days",
-        gravity:"9.81 m/s&sup2;",
+        gravity:"9.81 m/s²",
         facts: [
             "Earth is the only known planet with life.",
             "About 71% of Earth's surface is covered by water.",
@@ -82,12 +82,12 @@ const planets = {
     },
 
     Mars:{
-        temperature: "-63&deg;C",
+        temperature: "-63°C",
         population: "0",
         distance: "227.9 million km",
         moons: 2,
         orbit: "687days",
-        gravity: "3.71 m/s&sup2;",
+        gravity: "3.71 m/s²",
         facts: [
             "Mars is known as the Red Planet.",
             "Mars has two small moons.",
@@ -98,12 +98,12 @@ const planets = {
     },
 
     Jupiter: {
-        temperature: "-110&deg;C",
+        temperature: "-110°C",
         population: "0",
         distance: " 778.5 million km",
         moons: 146,
         orbit: "11.86 years",
-        gravity: "24.79 m/s&sup2;",
+        gravity: "24.79 m/s²",
         facts: [
             "Jupiter is the largest planet.",
             "It has a famous Great Red Spot.",
@@ -115,12 +115,12 @@ const planets = {
     },
 
     Saturn:{
-        temperature: "-140&deg;C",
+        temperature: "-140°C",
         population: "0",
         distance: "1.43 billion km",
         moons: 293,
         orbit: "29.45 years",
-        gravity: "10.44m/s&sup2;",
+        gravity: "10.44m/s²",
         facts: [
             "Saturn is famous for its spectacular rings.",
             "Saturn is a gas giant.",
@@ -130,12 +130,12 @@ const planets = {
     },
 
     Uranus: {
-        temperature: "-195&deg;C",
+        temperature: "-195°C",
         population: "0",
         distance: "2.87 billion km" ,
         moons: 28,
         orbit: "84 years",
-        gravity: "8.69 m/s&sup2;",
+        gravity: "8.69 m/s²",
         facts:[
             "Uranus rotates on its side.",
             "It has a blue-green appearance",
@@ -145,12 +145,12 @@ const planets = {
     },
 
     Neptune: {
-        temperature: "-280&deg;C",
+        temperature: "-280°C",
         population: "0",
         distance: "4.50 billion km",
         moons: 16,
         orbit: "164.8 years",
-        gravity: "11.15 m/s&sup2;",
+        gravity: "11.15 m/s²",
         facts:[
             "Neptune is the farthest major planet from the Sun.",
             "It has extremely strong winds.",
