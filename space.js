@@ -40,7 +40,7 @@ const planets = {
             "A hot world covered by thick clouds and a powerful greenhouse effect.",
 
         temperature:
-            "464&degC",
+            "464&deg;C",
 
         population:
             "0",
@@ -55,7 +55,7 @@ const planets = {
             "225 Days",
 
         gravity:
-            "8.87 m/s&sup;",
+            "8.87 m/s&sup2;",
 
         facts: [
             "Venus is the hottest planet.",
@@ -68,12 +68,12 @@ const planets = {
     },
 
     Earth: {
-        temperature: "15&degC",
-        poputaltion: "8.3 billion",
+        temperature: "15&deg;C",
+        population: "8.3 billion",
         distance: "149.6 million km",
         moons: 1,
         orbit:"365.25 days",
-        gravity:"9.81 m/s&sup;",
+        gravity:"9.81 m/s&sup2;",
         facts: [
             "Earth is the only known planet with life.",
             "About 71% of Earth's surface is covered by water.",
@@ -82,12 +82,12 @@ const planets = {
     },
 
     Mars:{
-        temperature: "-63&degC",
+        temperature: "-63&deg;C",
         population: "0",
         distance: "227.9 million km",
         moons: 2,
         orbit: "687days",
-        gravity: "3.71 m/s&sup;",
+        gravity: "3.71 m/s&sup2;",
         facts: [
             "Mars is known as the Red Planet.",
             "Mars has two small moons.",
@@ -98,12 +98,12 @@ const planets = {
     },
 
     Jupiter: {
-        temperature: "-110&degC",
+        temperature: "-110&deg;C",
         population: "0",
         distance: " 778.5 million km",
         moons: 146,
         orbit: "11.86 years",
-        gravity: "24.79 m/s&sup;",
+        gravity: "24.79 m/s&sup2;",
         facts: [
             "Jupiter is the largest planet.",
             "It has a famous Great Red Spot.",
@@ -115,12 +115,12 @@ const planets = {
     },
 
     Saturn:{
-        temperature: "-140&degC",
+        temperature: "-140&deg;C",
         population: "0",
         distance: "1.43 billion km",
-        moons: 146,
+        moons: 293,
         orbit: "29.45 years",
-        gravity: "10.44m/s&sup;",
+        gravity: "10.44m/s&sup2;",
         facts: [
             "Saturn is famous for its spectacular rings.",
             "Saturn is a gas giant.",
@@ -130,12 +130,12 @@ const planets = {
     },
 
     Uranus: {
-        temperature: "-195&degC",
+        temperature: "-195&deg;C",
         population: "0",
         distance: "2.87 billion km" ,
         moons: 28,
         orbit: "84 years",
-        gravity: "8.69 m/s&sup;",
+        gravity: "8.69 m/s&sup2;",
         facts:[
             "Uranus rotates on its side.",
             "It has a blue-green appearance",
@@ -145,12 +145,12 @@ const planets = {
     },
 
     Neptune: {
-        temperature: "-280&degC",
+        temperature: "-280&deg;C",
         population: "0",
         distance: "4.50 billion km",
         moons: 16,
         orbit: "164.8 years",
-        gravity: "11.15 m/s&sup;",
+        gravity: "11.15 m/s&sup2;",
         facts:[
             "Neptune is the farthest major planet from the Sun.",
             "It has extremely strong winds.",
@@ -161,43 +161,102 @@ const planets = {
     
 };
 
-function showPlanet(PlanetName){
-    const planet = planet[planetName];
+function showPlanet(planetName)
+{
+    const planet = planets[planetName];
 
     if(!planet){
         return;
     }
 
-    document.getElementByld("planet-name")
+    document.getElementById("planet-name")
         .textContent = planetName;
 
-    document.getElementByld("planet-description")
+    document.getElementById("planet-description")
         .textContent = planet.description;
 
-    document.getElementByld("temperature")
+    document.getElementById("temperature")
         .textContent = planet.temperature;
 
-    document.getElementByld("population")
-        .textContent = planet.temperature;
+    document.getElementById("population")
+        .textContent = planet.population;
 
-    document.getElementByld("distance")
+    document.getElementById("distance")
         .textContent = planet.distance;
 
-    document.getElementByld("moons")
-        .textContent = planets.moons;
+    document.getElementById("moons")
+        .textContent = planet.moons;
 
-    documents.getElementByld("orbit-period")
+    document.getElementById("orbit-period")
+        .textContent = planet.orbit;
+
+    document.getElementById("gravity")
         .textContent = planet.gravity;
 
-    document.getElementsByld("gravity")
-        .textContent = planet.gravity;
+       const factsList = 
+            document.getElementById("facts");
 
-        const li = 
-            document.createElement("li");
-        
-        li.textcontent = fact;
+        factsList.innerHTML = "";
 
-        factsList.appendChild(li);
+        planet.facts.forEach(function(fact){
+            const li =
+                document.createElement("li");
 
-};
+            li.textContent = fact;
 
+            factsList.appendChild(li);
+        });
+
+    document.querySelector(".information")
+    .scrollIntoView
+    ({
+        behavior : "smooth"
+    });
+}
+
+
+    function scrollToPlanets(){
+
+        document.getElementById("planets")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+    }
+
+    function scrollToHome(){
+
+        document.getElementById("home")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+    }
+
+    const table = 
+        document.getElementById("planet-table");
+
+        Object.keys(planets).forEach(function(name){
+
+            const planet = planets[name];
+
+            const row = 
+                document.createElement("tr");
+
+                row.innerHTML = `
+
+                <td>${name}</td>
+
+                <td>${planet.temperature}</td>
+
+                <td>${planet.population}</td>
+
+                <td>${planet.distance}</td>
+
+                <td>${planet.moons}</td>
+
+                `;
+
+                table.appendChild(row);
+
+        });
+
+    

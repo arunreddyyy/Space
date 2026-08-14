@@ -3,19 +3,21 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport"
-        content=" "width=device-width,
-        initial-scale="1.0">
-        <tittle>Solar System Explorer</tittle>
+        content=" width=device-width,
+        initial-scale=1.0">
+        <title>Space Explorer</title>
+        <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDXrGfx-dRCginByYzyStPgkTlnz8xjCOUPEqPjqYFRA&s=10">
         <link rel="stylesheet" href="space.css">
     </head>
     <body> 
         <header>
             <h1>&#127756;Solar System Explorer</h1>
             <nav>
-                <a href ="#Home">Home</a>
+                <a href ="#home">Home</a>
                 <a href ="#planets">Planets</a>
                 <a href ="#comparison">Comparison</a>
             </nav>
+            </header>
             <section id="home" class="hero">
                 <div class="hero-content">
                     <p class="subtitle">WELCOME TO SPACE</p>
@@ -32,14 +34,15 @@
             </section>
             <section id="planets">
                 <h2 class ="section-title">Our Solar System</h2>
+                         
                 <p
                     class="section-description">
-                        Click on any planet to view detailed information.
+                        click on the planets to get the information about it
                     </p>
                   <div class="solar-system">
                         <div class="sun"></div>
 
-                        <div class="orbitorbit1">
+                        <div class="orbit orbit1">
                             <div class="planet mercury"
                                 onclick="showPlanet('Mercury')">
                             </div>
@@ -209,6 +212,9 @@
 
                         </tbody>
                     </table>
+                    <button onclick ="scrollToHome()"
+                    class="back-button">
+                </button>
                 </div>
             </section>
 

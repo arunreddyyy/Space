@@ -196,6 +196,8 @@ section {
 .orbit{
     position: absolute;
 
+    pointer-events: none;
+
     left: 50%;
     top: 50%;
 
@@ -274,6 +276,8 @@ section {
     position: absolute;
 
     z-index: 5;
+
+    pointer-events: auto;
 
     transition: 0.03s;
 
