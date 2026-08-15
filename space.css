@@ -1195,5 +1195,75 @@ fooster p {
 }
 
 .satellite {
+    
+    position: absolute;
 
+    font-size: 22px;
+
+    z-index: 30;
+
+    pointer-events: none;
+
+
+}
+
+.satellite1 {
+    animation:
+    satelliteMove1 15s linear infinite;
+
+}
+
+@keyframes satelliteMove1{
+    0%{
+
+        left: 5%;
+        
+        top: 20%;
+    }
+    50%{
+        left: 80%;
+
+        top: 40%;
+
+    }
+
+    100% {
+        left: 5%;
+
+        top:70%;
+
+
+    }
+}
+
+.satellite2 {
+
+    animation:
+        satelliteMove2 20s linear infinite; 
+}
+
+@keyframes satelliteMove2 {
+
+    0%{
+        left : 90%;
+        top: 75%;
+
+    }
+    50%{
+
+        left: 20%;
+
+        top: 40%;
+    }
+    100% {
+        left: 90%;
+
+        top: 20%;
+    }
+}
+
+.solar-system.paused *,
+.solar-system.paused *::befor,
+.solar-system.paused*::after {
+    animation-play-state: paused !important;
 }

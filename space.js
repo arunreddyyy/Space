@@ -260,3 +260,117 @@ function showPlanet(planetName)
         });
 
     
+const starContainer =
+        document.getElementById("moving-stars");
+
+    for(let i = 0; i< 100 ;i++) {
+        
+        const star = 
+            document.createElement("div");
+
+        star.className =
+            "space-star";
+        
+        star.style.left =
+            Math.random() * 100 + "%";
+
+        star.style.top =
+            Math.random() * 100 + "%";
+
+        star.style.animationDuration =
+            2 + Math.random() * 4 + "s";
+
+        starContainer.appendChild(star);
+    }
+
+
+const asteroidBelt = 
+    document.getElementById("asteroid-belt");
+
+for(let i = 0; i< 80; i++){
+
+    const asteroid = 
+        document.createElement("div");
+
+        asteroid.className = 
+            "asteroid";
+
+        
+    const angle = 
+        Math.random() * Math.PI * 2;
+
+
+
+    const radius = 
+        165 + Math.random() * 20;
+
+
+    const x =
+        50 + 
+        Math.cos(angle) * 
+        radius / 
+        3.5;
+        
+    const y =
+        50 +
+        Math.sin(angle) *
+        radius / 
+        3.5;
+
+    asteroid.style.left = 
+        x + "%";
+
+    asteroid.style.top =
+        y+"%";
+
+
+    const size = 
+        2 + Math.random() * 4;
+
+    asteroid.style.width =
+        size + "px";
+
+    asteroid.style.height =
+    size + "px";
+
+    asteroidBelt.appendChild(
+        asteroid
+    );
+}
+
+
+const solarSystem =
+document.querySelector(
+    ".solar-system"
+);
+
+const pauseButton = 
+    document.createElement("button");
+
+pauseButton.textContent =
+    "⏸ Pause";
+
+pauseButton.className = 
+    "animation-button";
+
+pauseButton.onclick =
+function() {
+    solarSystem.classList.toggle(
+        "paused"
+    );
+
+    if(
+        solarSystem.classList.contains(
+            "paused"
+        )
+    ){
+        pauseButton.textContent =
+            "▶ Play"
+    }
+    else {
+        pauseButton.textContent =
+        "⏸ Pause";
+    }
+};
+
+solarSystem.parentElement.appendChild(pauseButton);
